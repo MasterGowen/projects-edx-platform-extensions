@@ -14,7 +14,9 @@ from xmodule.modulestore.tests.django_utils import (
 )
 from xmodule.modulestore.tests.factories import CourseFactory, ItemFactory
 
-from util.signals import course_deleted
+from django.dispatch.dispatcher import receiver
+
+from xmodule.modulestore.django import SignalHandler
 from edx_solutions_projects import models
 
 
